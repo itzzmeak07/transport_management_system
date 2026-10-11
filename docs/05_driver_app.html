@@ -1,0 +1,294 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>FreshTrack · Driver App</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400..600,0..1,0&display=block"><link rel="stylesheet" href="assets/ft.css"></head><body><nav style="position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid var(--s200);backdrop-filter:blur(6px)"><div style="max-width:1560px;margin:0 auto;padding:10px 24px;display:flex;gap:18px;align-items:center;overflow-x:auto;font-size:13px"><a href="index.html" class="brandmark" style="text-decoration:none;font-size:16px"><span class="leaf"><span class="ms fill">eco</span></span>FreshTrack</a><a href="00_style_guide.html" style="color:var(--s600);text-decoration:none;white-space:nowrap">Style Guide & Overview</a><a href="01_admin_dashboard.html" style="color:var(--s600);text-decoration:none;white-space:nowrap">Admin Dashboard</a><a href="02_create_trip.html" style="color:var(--s600);text-decoration:none;white-space:nowrap">Create Trip: Stops Builder</a><a href="03_live_map_trip_detail.html" style="color:var(--s600);text-decoration:none;white-space:nowrap">Live Map & Trip Detail</a><a href="04_approvals_pod_masters.html" style="color:var(--s600);text-decoration:none;white-space:nowrap">Approvals, POD Review & Vehicles</a><a href="05_driver_app.html" style="font-weight:700;color:var(--g);text-decoration:none;white-space:nowrap">Driver App</a><a href="06_dealer_app.html" style="color:var(--s600);text-decoration:none;white-space:nowrap">Dealer App & Tracking Link</a><a href="07_owner_app.html" style="color:var(--s600);text-decoration:none;white-space:nowrap">Vehicle Owner App</a><a href="08_onboarding_admin_monitor.html" style="color:var(--s600);text-decoration:none;white-space:nowrap">Login & Admin Monitor</a></div></nav><div class="board">
+  <div class="board-head">
+    <div>
+      <div class="eyebrow">Board 05 · Android app · Driver mode · 360 × 800</div>
+      <h1>Driver App</h1>
+      <p>Made for a driver on the highway, in sunlight, on a low-cost phone. Every screen has one main job and one big button, icons sit beside every label, and the text is in plain words. The driver always sees exactly one "Next stop" and can't deliver out of order.</p>
+    </div>
+  </div>
+
+  <div class="section-title">Before the trip</div>
+  <div class="screens">
+    <!-- 1 Permission explainer -->
+    <div class="shot">
+      <div class="phone"><div class="scr" data-sb="light">
+        <div class="body" style="padding:22px;gap:18px">
+          <div class="illus" style="height:230px">
+            <svg viewBox="0 0 280 200" width="260" height="190" aria-hidden="true">
+              <rect x="20" y="120" width="240" height="14" rx="7" fill="#CFE6D9"/>
+              <rect x="40" y="70" width="120" height="56" rx="8" fill="#1B6B4A"/><rect x="160" y="86" width="56" height="40" rx="8" fill="#12513A"/><rect x="172" y="94" width="30" height="16" rx="3" fill="#D5E6F2"/>
+              <circle cx="72" cy="130" r="13" fill="#1E2A35"/><circle cx="72" cy="130" r="5" fill="#C6CED5"/><circle cx="188" cy="130" r="13" fill="#1E2A35"/><circle cx="188" cy="130" r="5" fill="#C6CED5"/>
+              <path d="M140 20 c-17 0 -30 13 -30 30 c0 22 30 50 30 50 s30 -28 30 -50 c0 -17 -13 -30 -30 -30z" fill="#F2A900"/><circle cx="140" cy="50" r="11" fill="#fff"/>
+              <path d="M200 30 a40 40 0 0 1 30 30" stroke="#1B6B4A" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M206 16 a56 56 0 0 1 40 42" stroke="#1B6B4A" stroke-width="4" fill="none" stroke-linecap="round" opacity=".5"/>
+            </svg>
+          </div>
+          <div style="font-size:24px;font-weight:800;line-height:1.2">Share your location during the trip</div>
+          <div class="col" style="gap:12px">
+            <div class="row top"><div class="iconbox"><span class="ms">my_location</span></div><div><b>Choose "Allow all the time"</b><div class="small muted">So the admin and dealers can see the truck even when your screen is off.</div></div></div>
+            <div class="row top"><div class="iconbox amber"><span class="ms">battery_saver</span></div><div><b>Turn off battery saver for FreshTrack</b><div class="small muted">Otherwise the phone stops tracking on the highway.</div></div></div>
+            <div class="row top"><div class="iconbox grey"><span class="ms">lock</span></div><div><b>Only during a trip</b><div class="small muted">Tracking stops when the trip is complete.</div></div></div>
+          </div>
+          <div style="margin-top:auto" class="col">
+            <span class="btn lg"><span class="ms">check_circle</span>Allow</span>
+            <div class="row small" style="justify-content:center"><span class="lang dark"><span class="on">EN</span><span class="deva">हिंदी</span><span class="deva">मराठी</span></span></div>
+          </div>
+        </div>
+      </div></div>
+      <div class="cap">1 · Permission explainer <span>Shown once, before Android's own permission prompt. Required by Google Play for background location.</span></div>
+    </div>
+
+    <!-- 2 Home -->
+    <div class="shot">
+      <div class="phone"><div class="scr">
+        <div class="ab"><span class="ms fill">eco</span><span class="t">FreshTrack</span><span class="lang"><span class="on">EN</span><span class="deva">हि</span><span class="deva">म</span></span></div>
+        <div class="body">
+          <div class="row"><div class="avatar">RP</div><div><div class="small muted">Good morning</div><b style="font-size:18px">Ramesh Pawar</b></div></div>
+          <div class="card" style="padding:16px">
+            <div class="row between"><span class="small muted b">TODAY'S TRIP</span><span class="chip next solid">Starts 06:00</span></div>
+            <div style="font-size:20px;font-weight:800;margin:6px 0 2px">SLP-2610-00123</div>
+            <div class="small muted">MH13-AB-1234 · 10-wheeler</div>
+            <div class="row" style="margin-top:12px;gap:6px;font-size:14px"><span class="stop sm origin">S</span><b>Solapur</b><span class="ms muted" style="font-size:16px">east</span><span class="stop sm up">1</span><span class="stop sm up">2</span><span class="stop sm up">3</span><span class="muted">3 stops</span></div>
+            <div class="small muted" style="margin-top:6px">Hyderabad → Vijayawada → Visakhapatnam</div>
+          </div>
+          <b style="font-size:16px">At pickup</b>
+          <div class="col" style="gap:8px">
+            <div class="card flat row" style="padding:14px;background:var(--g-50);border-color:var(--g-100)"><span class="ms fill" style="color:var(--g);font-size:28px">check_circle</span><div class="grow"><b>Reached pickup</b><div class="small muted">05:48 · Solapur APMC</div></div></div>
+            <div class="card flat row" style="padding:14px;border:2px solid var(--amber)"><span class="ms" style="color:var(--amber-ink);font-size:28px">conveyor_belt</span><div class="grow"><b>Loading</b><div class="small muted">Load in order on the sheet</div></div><span class="ms">chevron_right</span></div>
+            <div class="card flat row" style="padding:14px;opacity:.6"><span class="ms" style="font-size:28px;color:var(--s400)">radio_button_unchecked</span><div class="grow"><b>Loaded</b><div class="small muted">Photos + seal no.</div></div></div>
+          </div>
+          <span class="btn lg amber" style="margin-top:auto"><span class="ms">list_alt</span>Open loading sheet</span>
+        </div>
+        <div class="bnav"><div class="on"><span class="ms">local_shipping</span>Trip</div><div><span class="ms">history</span>History</div><div><span class="ms">notifications</span>Alerts</div><div><span class="ms">person</span>Profile</div></div>
+      </div></div>
+      <div class="cap">2 · Home: today's trip <span>One trip, three steps at pickup. The current step is outlined in amber.</span></div>
+    </div>
+
+    <!-- 3 Loading sheet -->
+    <div class="shot">
+      <div class="phone"><div class="scr">
+        <div class="ab"><span class="ms">arrow_back</span><span class="t">Loading sheet</span><span class="ms">help</span></div>
+        <div class="body" style="gap:10px">
+          <div class="banner amber"><span class="ms">swap_vert</span><div><b>Load the last stop first.</b> Stop 1 goods go in last, near the door.</div></div>
+          <div class="col" style="gap:6px">
+            <div class="card flat row" style="padding:10px"><span class="badge g" style="height:24px;min-width:24px">1st</span><span class="stop sm up">3</span><div class="grow"><b>80 crates banana</b><div class="xs muted">Visakhapatnam · LR-3</div></div><span class="check on"><span class="ms" style="font-size:14px">check</span></span></div>
+            <div class="card flat row" style="padding:10px"><span class="badge g" style="height:24px;min-width:24px">2nd</span><span class="stop sm up">2</span><div class="grow"><b>3 t onion</b><div class="xs muted">Vijayawada · LR-2</div></div><span class="check on"><span class="ms" style="font-size:14px">check</span></span></div>
+            <div class="card flat row" style="padding:10px"><span class="badge amber" style="height:24px;min-width:24px">3rd</span><span class="stop sm up">1</span><div class="grow"><b>120 cr pomegranate · 40 bx grapes</b><div class="xs muted">Hyderabad · LR-1</div></div><span class="check"></span></div>
+          </div>
+          <b class="small">Loading photos</b>
+          <div class="row"><span class="photo banana" style="width:66px;height:58px"></span><span class="photo onion" style="width:66px;height:58px"></span><span class="cam" style="width:66px;height:58px"><span class="ms" style="font-size:28px">photo_camera</span></span><span class="cam" style="width:66px;height:58px"><span class="ms">add</span></span></div>
+          <div class="field"><label>Seal no.</label><div class="input lg"><span class="ms">lock</span>SS-44812</div></div>
+          <div class="card flat row" style="padding:10px"><span class="ms" style="color:var(--g)">receipt_long</span><div class="grow"><b class="small">Weighbridge slip</b><div class="xs muted">8.21 t · uploaded</div></div><span class="ms fill" style="color:var(--g)">check_circle</span></div>
+        </div>
+        <div class="foot"><span class="btn xl"><span class="ms fill">play_circle</span>START TRIP</span></div>
+      </div></div>
+      <div class="cap">3 · Loading sheet <span>Stops in load order (reverse of delivery), photos, seal no., weighbridge slip, then one huge START TRIP.</span></div>
+    </div>
+  </div>
+
+  <div class="section-title">On the road</div>
+  <div class="screens">
+    <!-- 4 Next stop EN -->
+    <div class="shot">
+      <div class="phone"><div class="scr">
+        <div class="ab"><span class="ms fill">eco</span><span class="t">FreshTrack</span><span class="lang"><span class="on">EN</span><span class="deva">हि</span><span class="deva">म</span></span></div>
+        <div class="body p0">
+          <div class="map" data-mode="trip" data-truck="0.62" data-done="1" data-labels="none" data-zoom="1.25" style="height:270px">
+            <div style="position:absolute;left:10px;top:10px;z-index:2" class="tracking-on"><i></i>Tracking ON</div>
+            <div class="mapctl"><i><span class="ms">my_location</span></i></div>
+          </div>
+          <div style="padding:14px 16px;display:flex;flex-direction:column;gap:12px;background:#fff;border-radius:18px 18px 0 0;margin-top:-16px;position:relative;z-index:3;flex:1">
+            <div class="row between"><span class="chip next solid" style="height:28px;font-size:13px;letter-spacing:.04em">NEXT · STOP 2 OF 3</span><div class="seg" style="width:90px"><i class="done"></i><i class="next"></i><i></i></div></div>
+            <div class="row top" style="gap:12px"><span class="stop xl next pulse">2</span><div class="grow"><div style="font-size:22px;font-weight:800;line-height:1.15">Krishna Agro Mart</div><div class="row" style="gap:4px;color:var(--s600)"><span class="ms" style="font-size:18px">location_on</span>Vijayawada</div></div></div>
+            <div class="row" style="gap:10px">
+              <div class="card flat grow" style="padding:10px"><div class="row"><span class="ms" style="color:var(--s600)">inventory_2</span><div><div class="xs muted">Unload</div><b style="font-size:17px">3 t onion</b></div></div></div>
+              <div class="card flat grow" style="padding:10px;background:var(--amber-50);border-color:#F5D98A"><div class="row"><span class="ms" style="color:var(--amber-ink)">schedule</span><div><div class="xs muted">ETA</div><b style="font-size:20px">18:20</b></div></div></div>
+            </div>
+            <div class="row" style="gap:10px"><span class="btn lg" style="flex:1.3"><span class="ms fill">navigation</span>Navigate</span><span class="btn lg out" style="flex:1"><span class="ms">call</span>Call</span></div>
+            <span class="btn ghost" style="height:48px;border-radius:12px"><span class="ms" style="color:var(--red)">report</span>Report problem</span>
+          </div>
+        </div>
+        <div class="bnav"><div class="on"><span class="ms">local_shipping</span>Trip</div><div><span class="ms">format_list_numbered</span>Stops</div><div><span class="ms">notifications</span>Alerts</div><div><span class="ms">person</span>Profile</div></div>
+      </div></div>
+      <div class="cap">4 · Next stop (hero screen) <span>The whole app on the road: map, one Next-stop card, Navigate and Call. "Tracking ON" is always visible.</span></div>
+    </div>
+
+    <!-- 4b Next stop Hindi -->
+    <div class="shot">
+      <div class="phone"><div class="scr deva">
+        <div class="ab"><span class="ms fill">eco</span><span class="t">FreshTrack</span><span class="lang"><span>EN</span><span class="on">हि</span><span>म</span></span></div>
+        <div class="body p0">
+          <div class="map" data-mode="trip" data-truck="0.62" data-done="1" data-labels="none" data-zoom="1.25" style="height:270px">
+            <div style="position:absolute;left:10px;top:10px;z-index:2" class="tracking-on"><i></i>ट्रैकिंग चालू</div>
+          </div>
+          <div style="padding:14px 16px;display:flex;flex-direction:column;gap:12px;background:#fff;border-radius:18px 18px 0 0;margin-top:-16px;position:relative;z-index:3;flex:1">
+            <div class="row between"><span class="chip next solid" style="height:28px;font-size:14px">अगला स्टॉप · 2 / 3</span><div class="seg" style="width:90px"><i class="done"></i><i class="next"></i><i></i></div></div>
+            <div class="row top" style="gap:12px"><span class="stop xl next pulse" style="font-family:var(--f)">2</span><div class="grow"><div style="font-size:22px;font-weight:700;line-height:1.25">कृष्णा एग्रो मार्ट</div><div class="row" style="gap:4px;color:var(--s600)"><span class="ms" style="font-size:18px">location_on</span>विजयवाड़ा</div></div></div>
+            <div class="row" style="gap:10px">
+              <div class="card flat grow" style="padding:10px"><div class="row"><span class="ms" style="color:var(--s600)">inventory_2</span><div><div class="xs muted">उतारना है</div><b style="font-size:17px">3 टन प्याज़</b></div></div></div>
+              <div class="card flat grow" style="padding:10px;background:var(--amber-50);border-color:#F5D98A"><div class="row"><span class="ms" style="color:var(--amber-ink)">schedule</span><div><div class="xs muted">पहुँचने का समय</div><b style="font-size:20px;font-family:var(--f)">18:20</b></div></div></div>
+            </div>
+            <div class="row" style="gap:10px"><span class="btn lg" style="flex:1.3"><span class="ms fill">navigation</span>रास्ता देखें</span><span class="btn lg out" style="flex:1"><span class="ms">call</span>कॉल</span></div>
+            <span class="btn ghost" style="height:48px;border-radius:12px"><span class="ms" style="color:var(--red)">report</span>समस्या बताएँ</span>
+          </div>
+        </div>
+        <div class="bnav"><div class="on"><span class="ms">local_shipping</span>यात्रा</div><div><span class="ms">format_list_numbered</span>स्टॉप</div><div><span class="ms">notifications</span>सूचना</div><div><span class="ms">person</span>प्रोफ़ाइल</div></div>
+      </div></div>
+      <div class="cap">4 · Same screen in Hindi <span>Every label is translated. Numbers, ETA and truck numbers stay in digits drivers already read.</span></div>
+    </div>
+
+    <!-- 4c Report problem sheet -->
+    <div class="shot">
+      <div class="phone"><div class="scr">
+        <div class="ab"><span class="ms fill">eco</span><span class="t">FreshTrack</span></div>
+        <div class="body p0"><div class="map" data-mode="trip" data-truck="0.62" data-done="1" data-labels="none" data-zoom="1.25" style="height:100%"></div></div>
+        <div class="scrim"></div>
+        <div class="sheet">
+          <div class="grab"></div>
+          <b style="font-size:20px">What happened?</b>
+          <div style="display:grid;grid-template-columns:minmax(0,1fr) 1fr;gap:10px">
+            <div class="card flat col" style="align-items:center;padding:16px 8px;gap:6px"><span class="ms" style="font-size:34px;color:var(--blue)">local_cafe</span><b>Break</b></div>
+            <div class="card flat col" style="align-items:center;padding:16px 8px;gap:6px;border:2px solid var(--red);background:var(--red-50)"><span class="ms" style="font-size:34px;color:var(--red)">car_crash</span><b>Breakdown</b></div>
+            <div class="card flat col" style="align-items:center;padding:16px 8px;gap:6px"><span class="ms" style="font-size:34px;color:var(--red)">emergency</span><b>Accident</b></div>
+            <div class="card flat col" style="align-items:center;padding:16px 8px;gap:6px"><span class="ms" style="font-size:34px;color:var(--s700)">local_police</span><b>Police check</b></div>
+            <div class="card flat col" style="align-items:center;padding:16px 8px;gap:6px"><span class="ms" style="font-size:34px;color:var(--amber-ink)">traffic</span><b>Traffic jam</b></div>
+            <div class="card flat col" style="align-items:center;padding:16px 8px;gap:6px"><span class="ms" style="font-size:34px;color:var(--s600)">more_horiz</span><b>Other</b></div>
+          </div>
+          <div class="row"><span class="cam" style="width:64px;height:56px"><span class="ms" style="font-size:26px">photo_camera</span></span><span class="small muted">Add a photo (optional)</span></div>
+          <span class="btn lg danger"><span class="ms">send</span>Send to admin &amp; owner</span>
+        </div>
+      </div></div>
+      <div class="cap">4 · Report problem <span>Six big choices and an optional photo. The admin and owner get it instantly with the truck's location.</span></div>
+    </div>
+
+    <!-- 7 Offline -->
+    <div class="shot">
+      <div class="phone"><div class="scr">
+        <div class="ab"><span class="ms fill">eco</span><span class="t">FreshTrack</span></div>
+        <div class="banner dark" style="border-radius:0;padding:12px 16px"><span class="ms" style="color:var(--amber)">cloud_off</span><div><b>No network</b><div class="small" style="opacity:.85">34 updates saved. They will sync automatically.</div></div></div>
+        <div class="body p0">
+          <div class="map" data-mode="trip" data-truck="0.7" data-done="1" data-labels="none" data-zoom="1.25" style="height:230px"><div style="position:absolute;left:10px;top:10px;z-index:2" class="tracking-on"><i></i>Tracking ON · saving offline</div></div>
+          <div style="padding:14px 16px;display:flex;flex-direction:column;gap:12px;background:#fff;flex:1">
+            <div class="row between"><span class="chip next solid" style="height:28px;font-size:13px">NEXT · STOP 2 OF 3</span></div>
+            <div class="row top" style="gap:12px"><span class="stop xl next">2</span><div><div style="font-size:22px;font-weight:800">Krishna Agro Mart</div><div class="muted">Vijayawada · 3 t onion</div></div></div>
+            <div class="card flat" style="padding:12px"><div class="row between small"><span class="muted">Last sent</span><b>17:02 (11 min ago)</b></div><div class="row between small" style="margin-top:4px"><span class="muted">Saved on phone</span><b>34 points · 1 event</b></div></div>
+            <div class="banner green"><span class="ms">check_circle</span><div>You can keep driving and even deliver. Everything uploads when signal returns.</div></div>
+          </div>
+        </div>
+        <div class="bnav"><div class="on"><span class="ms">local_shipping</span>Trip</div><div><span class="ms">format_list_numbered</span>Stops</div><div><span class="ms">notifications</span>Alerts</div><div><span class="ms">person</span>Profile</div></div>
+      </div></div>
+      <div class="cap">7 · Offline <span>A dark banner says how much is waiting to sync. Nothing is lost on highways without signal.</span></div>
+    </div>
+  </div>
+
+  <div class="section-title">At the dealer</div>
+  <div class="screens">
+    <!-- 5 OTP -->
+    <div class="shot">
+      <div class="phone"><div class="scr">
+        <div class="ab"><span class="ms">arrow_back</span><span class="t">Deliver · Stop 2</span></div>
+        <div class="body" style="gap:14px">
+          <div class="row" style="gap:6px;font-size:13px"><span class="chip ok solid"><span class="ms">check</span>Reached</span><span class="ms muted" style="font-size:16px">east</span><span class="chip ok solid"><span class="ms">check</span>Unloading</span><span class="ms muted" style="font-size:16px">east</span><span class="chip next solid">OTP</span></div>
+          <div class="card flat row"><span class="stop next lg">2</span><div><b>Krishna Agro Mart</b><div class="small muted">Vijayawada · 3 t onion · LR-2</div></div></div>
+          <div style="text-align:center"><b style="font-size:20px">Enter the dealer's OTP</b><div class="small muted">Ask Krishna Agro Mart for the 6-digit code in their app</div></div>
+          <div class="otp"><i class="f">4</i><i class="f">8</i><i class="f">1</i><i class="cur"></i><i></i><i></i></div>
+          <div class="keypad" style="margin-top:auto"><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i><i class="k2"><span class="ms">backspace</span></i><i>0</i><i class="k2" style="background:var(--g);color:#fff"><span class="ms">arrow_forward</span></i></div>
+        </div>
+      </div></div>
+      <div class="cap">5 · Delivery: dealer's OTP <span>Three-step strip on top. A big keypad, because typing on a phone in a truck is hard.</span></div>
+    </div>
+
+    <!-- 5c OTP error -->
+    <div class="shot">
+      <div class="phone"><div class="scr">
+        <div class="ab"><span class="ms">arrow_back</span><span class="t">Deliver · Stop 2</span></div>
+        <div class="body" style="gap:14px">
+          <div class="card flat row"><span class="stop next lg">2</span><div><b>Krishna Agro Mart</b><div class="small muted">Vijayawada · 3 t onion · LR-2</div></div></div>
+          <div style="text-align:center"><b style="font-size:20px">Enter the dealer's OTP</b></div>
+          <div class="otp err"><i>7</i><i>3</i><i>0</i><i>2</i><i>9</i><i>5</i></div>
+          <div class="banner red"><span class="ms">error</span><div><b style="font-size:15px">This OTP belongs to another stop.</b><div>You are at <b>Stop 2 · Krishna Agro Mart</b>. Ask this dealer for their own code.</div></div></div>
+          <div class="keypad" style="margin-top:auto"><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i><i class="k2"><span class="ms">backspace</span></i><i>0</i><i class="k2" style="background:var(--s300);color:#fff"><span class="ms">arrow_forward</span></i></div>
+        </div>
+      </div></div>
+      <div class="cap">5 · OTP error state <span>A code from Stop 3's dealer is rejected here. Goods can't be handed to the wrong dealer.</span></div>
+    </div>
+
+    <!-- 5b qty + photos + signature -->
+    <div class="shot">
+      <div class="phone"><div class="scr">
+        <div class="ab"><span class="ms">arrow_back</span><span class="t">Deliver · Stop 2</span></div>
+        <div class="body" style="gap:12px">
+          <div class="banner green"><span class="ms fill">verified</span><div><b>OTP correct.</b> Check quantities with the dealer.</div></div>
+          <div class="card flat" style="padding:12px">
+            <div class="row between"><b>Onion (Red)</b><span class="small muted">Sent 3 t</span></div>
+            <div class="row" style="margin-top:8px;gap:8px">
+              <div class="field grow"><label>Received</label><div class="input lg" style="height:48px">3.0 t</div></div>
+              <div class="field grow"><label>Damaged</label><div class="input lg" style="height:48px">0</div></div>
+            </div>
+          </div>
+          <b class="small">Delivery photos</b>
+          <div class="row"><span class="photo onion" style="width:72px;height:60px"></span><span class="photo onion" style="width:72px;height:60px;filter:brightness(.9)"></span><span class="cam" style="width:72px;height:60px"><span class="ms" style="font-size:28px">photo_camera</span></span></div>
+          <b class="small">Dealer signature</b>
+          <div style="height:110px;border:2px dashed var(--s300);border-radius:12px;background:#fff;position:relative"><svg viewBox="0 0 300 110" style="position:absolute;inset:0;width:100%;height:100%"><path d="M30 70 C50 30 64 28 72 58 S96 86 108 46 S136 30 146 64 S176 74 190 42 S222 40 236 60 S258 66 272 48" fill="none" stroke="#1E2A35" stroke-width="3" stroke-linecap="round"/></svg><span class="xs muted" style="position:absolute;right:10px;bottom:6px">Clear</span></div>
+        </div>
+        <div class="foot"><span class="btn lg"><span class="ms fill">task_alt</span>Confirm delivery</span></div>
+      </div></div>
+      <div class="cap">5 · Quantities, photos, signature <span>Received and damaged per item. Then the app moves on to Stop 3 by itself.</span></div>
+    </div>
+
+    <!-- 6 Can't deliver -->
+    <div class="shot">
+      <div class="phone"><div class="scr">
+        <div class="ab"><span class="ms">arrow_back</span><span class="t">Can't deliver here</span></div>
+        <div class="body" style="gap:14px">
+          <div class="card flat row"><span class="stop next lg">2</span><div><b>Krishna Agro Mart</b><div class="small muted">Vijayawada</div></div></div>
+          <b style="font-size:18px">Why can't you deliver?</b>
+          <div style="display:grid;grid-template-columns:minmax(0,1fr) 1fr;gap:10px">
+            <div class="card flat col" style="align-items:center;padding:16px 8px;gap:6px;border:2px solid var(--g);background:var(--g-50)"><span class="ms" style="font-size:32px;color:var(--g)">storefront</span><b>Shop closed</b></div>
+            <div class="card flat col" style="align-items:center;padding:16px 8px;gap:6px"><span class="ms" style="font-size:32px;color:var(--s600)">person_off</span><b>Dealer absent</b></div>
+            <div class="card flat col" style="align-items:center;padding:16px 8px;gap:6px"><span class="ms" style="font-size:32px;color:var(--s600)">block</span><b>Road blocked</b></div>
+            <div class="card flat col" style="align-items:center;padding:16px 8px;gap:6px"><span class="ms" style="font-size:32px;color:var(--s600)">more_horiz</span><b>Other</b></div>
+          </div>
+          <b class="small">Photo of the shop</b>
+          <div class="row"><span class="photo" style="width:96px;height:72px;background:linear-gradient(180deg,#9FB3C4 0 40%,#6F6A60 40%)"><span style="position:absolute;left:14px;right:14px;top:34px;height:30px;background:repeating-linear-gradient(180deg,#B9BEC2 0 4px,#8E959A 4px 6px)"></span></span><span class="cam" style="width:72px;height:72px"><span class="ms">add_a_photo</span></span></div>
+          <div class="field"><label>Note (optional)</label><div class="input">Shutter down, waited 25 min</div></div>
+        </div>
+        <div class="foot"><span class="btn lg amber"><span class="ms">send</span>Send to admin</span></div>
+      </div></div>
+      <div class="cap">6 · Can't deliver <span>Four big reason chips and a photo. The driver can't skip a stop by themselves.</span></div>
+    </div>
+
+    <!-- 6b Waiting -->
+    <div class="shot">
+      <div class="phone"><div class="scr">
+        <div class="ab"><span class="ms fill">eco</span><span class="t">FreshTrack</span></div>
+        <div class="body" style="align-items:center;text-align:center;justify-content:center;gap:16px">
+          <div style="width:120px;height:120px;border-radius:50%;background:var(--amber-50);display:grid;place-items:center;box-shadow:0 0 0 14px rgba(242,169,0,.12)"><span class="ms" style="font-size:60px;color:var(--amber-ink)">hourglass_top</span></div>
+          <div style="font-size:24px;font-weight:800">Waiting for admin decision</div>
+          <div class="muted">You told the admin: <b style="color:var(--s800)">Shop closed</b> at Stop 2, Krishna Agro Mart.<br>Please stay here. This usually takes a few minutes.</div>
+          <div class="card flat" style="width:100%;text-align:left"><div class="row"><span class="ms" style="color:var(--g)">check_circle</span>Sent at 17:41 with 1 photo</div><div class="row" style="margin-top:6px"><span class="ms" style="color:var(--amber-ink)">pending</span>Admin is reviewing…</div></div>
+          <span class="btn lg out" style="margin-top:8px"><span class="ms">call</span>Call admin office</span>
+        </div>
+      </div></div>
+      <div class="cap">6 · Waiting for decision <span>Once the admin decides (skip, move later, return goods), the Next-stop card updates by itself.</span></div>
+    </div>
+
+    <!-- 8 Completed -->
+    <div class="shot">
+      <div class="phone"><div class="scr">
+        <div class="ab"><span class="ms fill">eco</span><span class="t">FreshTrack</span></div>
+        <div class="body" style="align-items:center;text-align:center;gap:16px;background:linear-gradient(180deg,var(--g-50),var(--s50) 60%)">
+          <svg viewBox="0 0 300 140" width="300" height="140" aria-hidden="true"><g><rect x="40" y="20" width="8" height="14" rx="2" fill="#F2A900" transform="rotate(20 44 27)"/><rect x="240" y="30" width="8" height="14" rx="2" fill="#1B6B4A" transform="rotate(-25 244 37)"/><circle cx="70" cy="80" r="5" fill="#F2A900"/><circle cx="230" cy="90" r="5" fill="#2F6FB3"/><rect x="200" y="10" width="6" height="12" rx="2" fill="#D23F3F" transform="rotate(35 203 16)"/><rect x="95" y="12" width="6" height="12" rx="2" fill="#2F6FB3" transform="rotate(-15 98 18)"/></g><circle cx="150" cy="75" r="52" fill="#1B6B4A"/><path d="M124 76 l18 18 l34 -36" stroke="#fff" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div style="font-size:26px;font-weight:800;line-height:1.2">Trip complete!<br>Well done, Ramesh</div>
+          <div class="row" style="gap:6px"><span class="stop done">1</span><span class="stop done">2</span><span class="stop done">3</span><span class="muted small">All 3 stops delivered</span></div>
+          <div class="card" style="width:100%;display:grid;grid-template-columns:minmax(0,1fr) 1fr 1fr;text-align:center;padding:12px 6px">
+            <div><b style="font-size:18px">1,046</b><div class="xs muted">km</div></div><div><b style="font-size:18px">21 h</b><div class="xs muted">on the road</div></div><div><b style="font-size:18px">8.2 t</b><div class="xs muted">delivered</div></div>
+          </div>
+          <div class="row" style="background:var(--s150);color:var(--s700);padding:8px 14px;border-radius:999px;font-weight:700"><span class="ms">location_off</span>Tracking OFF</div>
+          <span class="btn lg" style="margin-top:auto">Back to home</span>
+        </div>
+      </div></div>
+      <div class="cap">8 · Trip completed <span>After the last stop the trip completes and location sharing stops automatically.</span></div>
+    </div>
+  </div>
+</div>
+<script src="assets/ft.js"></script></body></html>

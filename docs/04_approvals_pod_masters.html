@@ -1,0 +1,134 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>FreshTrack · Approvals, POD Review & Vehicles</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400..600,0..1,0&display=block"><link rel="stylesheet" href="assets/ft.css"></head><body><nav style="position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid var(--s200);backdrop-filter:blur(6px)"><div style="max-width:1560px;margin:0 auto;padding:10px 24px;display:flex;gap:18px;align-items:center;overflow-x:auto;font-size:13px"><a href="index.html" class="brandmark" style="text-decoration:none;font-size:16px"><span class="leaf"><span class="ms fill">eco</span></span>FreshTrack</a><a href="00_style_guide.html" style="color:var(--s600);text-decoration:none;white-space:nowrap">Style Guide & Overview</a><a href="01_admin_dashboard.html" style="color:var(--s600);text-decoration:none;white-space:nowrap">Admin Dashboard</a><a href="02_create_trip.html" style="color:var(--s600);text-decoration:none;white-space:nowrap">Create Trip: Stops Builder</a><a href="03_live_map_trip_detail.html" style="color:var(--s600);text-decoration:none;white-space:nowrap">Live Map & Trip Detail</a><a href="04_approvals_pod_masters.html" style="font-weight:700;color:var(--g);text-decoration:none;white-space:nowrap">Approvals, POD Review & Vehicles</a><a href="05_driver_app.html" style="color:var(--s600);text-decoration:none;white-space:nowrap">Driver App</a><a href="06_dealer_app.html" style="color:var(--s600);text-decoration:none;white-space:nowrap">Dealer App & Tracking Link</a><a href="07_owner_app.html" style="color:var(--s600);text-decoration:none;white-space:nowrap">Vehicle Owner App</a><a href="08_onboarding_admin_monitor.html" style="color:var(--s600);text-decoration:none;white-space:nowrap">Login & Admin Monitor</a></div></nav><div class="board">
+  <div class="board-head">
+    <div>
+      <div class="eyebrow">Board 04 · Admin web panel · 1440 px</div>
+      <h1>Approvals, POD Review &amp; Vehicles</h1>
+      <p>Where the admin makes decisions: what to do when a driver can't deliver, who can join as an owner or dealer, whether a delivery is accepted, and which trucks have documents about to expire.</p>
+    </div>
+  </div>
+
+  <div class="section-title">A · Approvals inbox</div>
+  <div class="desk-wrap"><div class="desk">
+    <aside class="side" data-on="Approvals"></aside>
+    <div class="main">
+      <div class="topbar"></div>
+      <div class="content">
+        <div class="ph"><div><div class="crumb">Operations</div><h2>Approvals</h2></div></div>
+        <div class="tabs"><span class="on">All <span class="badge amber">4</span></span><span>Stop decisions <span class="chip" style="height:18px">1</span></span><span>KYC: owners <span class="chip" style="height:18px">1</span></span><span>KYC: dealers <span class="chip" style="height:18px">1</span></span><span>Documents <span class="chip" style="height:18px">1</span></span></div>
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) 1fr;gap:16px;align-items:start">
+          <div class="card" style="border-color:#F5D98A;border-width:2px">
+            <div class="row between"><span class="chip next solid"><span class="ms">priority_high</span>Urgent · truck waiting</span><span class="small muted">15:51 · 14 min ago</span></div>
+            <div class="row top" style="margin-top:12px"><span class="stop next lg">2</span><div class="grow"><b style="font-size:17px">Driver can't deliver at Stop 2: Shop closed</b><div class="small muted">SLP-2610-00118 · MH13-JK-7781 · driver Vikram Shinde</div><div class="small" style="margin-top:4px">Sri Lakshmi Vegetables, Kurnool · 2.1 t tomato · LR-2</div></div></div>
+            <div class="row" style="margin-top:12px;gap:10px"><div class="photo" style="width:140px;height:96px;background:linear-gradient(180deg,#9FB3C4 0 40%,#6F6A60 40%)"><span style="position:absolute;left:18px;right:18px;top:46px;height:40px;background:repeating-linear-gradient(180deg,#B9BEC2 0 4px,#8E959A 4px 6px);border-radius:2px"></span></div><div class="small"><div class="b">Driver's note</div><div class="muted">"Shutter is down, dealer not answering phone. Waited 25 min."</div><div style="margin-top:6px"><span class="ms" style="font-size:16px;color:var(--g)">location_on</span> Photo taken 40 m from dealer address</div></div></div>
+            <div class="field" style="margin-top:14px"><label>Decision</label>
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+                <div class="card flat" style="padding:10px;border-color:var(--g);background:var(--g-50)"><div class="row"><span class="radio on"></span><b>Skip stop</b></div><div class="xs muted" style="margin-top:4px">Go to Stop 3 now</div></div>
+                <div class="card flat" style="padding:10px"><div class="row"><span class="radio"></span><b>Move to later</b></div><div class="xs muted" style="margin-top:4px">Deliver after Stop 3</div></div>
+                <div class="card flat" style="padding:10px"><div class="row"><span class="radio"></span><b>Return goods</b></div><div class="xs muted" style="margin-top:4px">Bring back to Solapur</div></div>
+              </div>
+            </div>
+            <div class="field" style="margin-top:10px"><label>Reason <span style="color:var(--red)">*</span></label><div class="input">Dealer shop closed today (Dussehra). Tomato will be sold to Stop 3.</div></div>
+            <div class="row" style="margin-top:12px;justify-content:space-between"><span class="small muted"><span class="ms" style="font-size:16px">notifications</span> Driver, owner and Sri Lakshmi Vegetables will be notified</span><div class="row"><span class="btn ghost"><span class="ms">call</span>Call dealer</span><span class="btn">Confirm decision</span></div></div>
+          </div>
+
+          <div class="col" style="gap:16px">
+            <div class="card">
+              <div class="row between"><div class="row"><div class="iconbox"><span class="ms">badge</span></div><div><b style="font-size:16px">New vehicle owner: Bhosale Freight Lines</b><div class="small muted">Pandharpur · 3 trucks · applied 05 Oct</div></div></div><span class="chip next">KYC pending</span></div>
+              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px">
+                <div class="col" style="gap:4px"><div class="photo doc" style="height:76px"></div><div class="small b">GSTIN</div><div class="xs muted">27ABKPB4321L1Z5 <span style="color:var(--g)">✓ valid</span></div></div>
+                <div class="col" style="gap:4px"><div class="photo doc" style="height:76px"></div><div class="small b">PAN</div><div class="xs muted">ABKPB4321L</div></div>
+                <div class="col" style="gap:4px"><div class="photo doc" style="height:76px"></div><div class="small b">RC (3)</div><div class="xs muted">MH13-AX-1188 +2</div></div>
+                <div class="col" style="gap:4px"><div class="photo doc" style="height:76px;border-color:var(--red)"></div><div class="small b">Insurance</div><div class="xs" style="color:var(--red-ink)">1 expires 20 Oct</div></div>
+              </div>
+              <div class="row" style="margin-top:14px;justify-content:flex-end"><span class="btn danger-out">Reject</span><span class="btn">Approve owner</span></div>
+            </div>
+            <div class="card">
+              <div class="row between"><div class="row"><div class="iconbox blue"><span class="ms">storefront</span></div><div><b style="font-size:16px">New dealer: Annapurna Fruits, Guntur</b><div class="small muted">Invited by Suresh K. · applied 06 Oct</div></div></div><span class="chip next">KYC pending</span></div>
+              <div class="row" style="margin-top:12px;gap:14px"><div class="photo doc" style="width:64px;height:64px"></div><div class="photo doc" style="width:64px;height:64px"></div><div class="small grow"><div><span class="muted">GSTIN</span> <b>37AAKFA9087M1ZQ</b></div><div><span class="muted">FSSAI</span> <b>10123007000412</b></div><div><span class="muted">Delivery pin</span> <b>Mirchi Yard, Guntur</b> <span class="tlink">view on map</span></div></div></div>
+              <div class="row" style="margin-top:14px;justify-content:flex-end"><span class="btn danger-out">Reject</span><span class="btn">Approve dealer</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+
+  <div class="section-title">B · POD review (per stop)</div>
+  <div class="desk-wrap"><div class="desk">
+    <aside class="side" data-on="POD Review"></aside>
+    <div class="main">
+      <div class="topbar"></div>
+      <div class="content">
+        <div class="ph">
+          <div><div class="crumb">POD Review / SLP-2610-00117</div><div class="row" style="gap:12px"><h2>Stop 1 · Orange City Traders, Nagpur</h2><span class="chip next solid">Partly delivered</span></div><div class="small muted" style="margin-top:4px">Truck MH14-CD-1902 · driver Sunil More · LR-1 · delivered 06 Oct, 13:22 · OTP verified</div></div>
+          <div class="row"><span class="btn danger-out"><span class="ms">gavel</span>Raise dispute</span><span class="btn"><span class="ms">check</span>Accept POD</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:16px;align-items:start">
+          <div class="card" style="padding:0;overflow:hidden">
+            <div style="padding:12px 16px"><b style="font-size:15px">Ordered vs received</b></div>
+            <table class="t">
+              <thead><tr><th>Product</th><th class="r">Ordered</th><th class="r">Received</th><th class="r">Damaged</th><th class="r">Rejected</th><th class="r">Short</th><th>Dealer remark</th></tr></thead>
+              <tbody>
+                <tr class="bad"><td><b>Pomegranate (Bhagwa)</b></td><td class="r">90 crates</td><td class="r"><b>84</b></td><td class="r">0</td><td class="r">0</td><td class="r"><b style="color:var(--red)">−6</b></td><td class="wr small">6 crates missing on arrival, seal intact</td></tr>
+                <tr class="bad"><td><b>Grapes (Thompson)</b></td><td class="r">30 boxes</td><td class="r"><b>30</b></td><td class="r"><b style="color:var(--red)">3</b></td><td class="r">0</td><td class="r">0</td><td class="wr small">3 boxes crushed (bottom row)</td></tr>
+                <tr><td><b>Sweet lime</b></td><td class="r">40 crates</td><td class="r"><b>40</b></td><td class="r">0</td><td class="r">0</td><td class="r">0</td><td class="small muted">—</td></tr>
+              </tbody>
+            </table>
+            <div class="row between" style="padding:12px 16px;background:var(--red-50);border-top:1px solid #F2B8B8"><span class="b" style="color:var(--red-ink)"><span class="ms">report</span> Loss on this stop: 6 crates short + 3 boxes damaged ≈ ₹8,640</span><span class="small muted">Loaded count at Solapur: 90 crates (photo, 06:12)</span></div>
+            <div style="padding:16px;display:grid;grid-template-columns:minmax(0,1fr) 1fr;gap:16px">
+              <div><div class="small b" style="margin-bottom:8px">Delivery photos (4)</div><div class="row wrap"><span class="photo crates" style="width:96px;height:72px"></span><span class="photo crates" style="width:96px;height:72px;filter:saturate(.7)"></span><span class="photo" style="width:96px;height:72px;background:linear-gradient(135deg,#6E7B3A,#3F4A1F)"></span><span class="photo doc" style="width:72px;height:72px"></span></div></div>
+              <div><div class="small b" style="margin-bottom:8px">Dealer e-signature</div><div style="height:72px;border:1px solid var(--s200);border-radius:8px;background:#fff;position:relative"><svg viewBox="0 0 200 70" style="position:absolute;inset:0;width:100%;height:100%"><path d="M18 48 C30 20 40 18 46 40 S60 60 70 30 S88 18 96 42 S118 50 128 28 S150 30 160 40 S176 44 186 32" fill="none" stroke="#1E2A35" stroke-width="2.2" stroke-linecap="round"/></svg></div><div class="xs muted" style="margin-top:4px">Received by: Prakash Wankhede (store manager)</div></div>
+            </div>
+          </div>
+          <div class="col" style="gap:14px">
+            <div class="card">
+              <b style="font-size:15px">Delivery checks</b>
+              <div class="col" style="gap:10px;margin-top:12px">
+                <div class="row"><div class="iconbox"><span class="ms">location_on</span></div><div class="grow"><b>Delivered 120 m from dealer address</b><div class="small muted">Within the 300 m limit</div></div><span class="ms fill" style="color:var(--g)">check_circle</span></div>
+                <div class="row"><div class="iconbox"><span class="ms">pin</span></div><div class="grow"><b>Dealer OTP matched</b><div class="small muted">13:22 · correct stop</div></div><span class="ms fill" style="color:var(--g)">check_circle</span></div>
+                <div class="row"><div class="iconbox"><span class="ms">schedule</span></div><div class="grow"><b>On time</b><div class="small muted">ETA was 13:40</div></div><span class="ms fill" style="color:var(--g)">check_circle</span></div>
+              </div>
+            </div>
+            <div class="card red flat">
+              <div class="xs b" style="text-transform:uppercase;letter-spacing:.06em;color:var(--red-ink);margin-bottom:8px">Example of a failed check</div>
+              <div class="row"><div class="iconbox red"><span class="ms">wrong_location</span></div><div class="grow"><b style="color:var(--red-ink)">Delivered 4.2 km from dealer address</b><div class="small">Stop 2 · SLP-2610-00109 · check before accepting</div></div><span class="ms fill" style="color:var(--red)">flag</span></div>
+            </div>
+            <div class="field"><label>Note for the record</label><div class="input area ph">Optional note before accepting or raising a dispute…</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+
+  <div class="section-title">C · Vehicles master</div>
+  <div class="desk-wrap"><div class="desk">
+    <aside class="side" data-on="Vehicles"></aside>
+    <div class="main">
+      <div class="topbar"></div>
+      <div class="content">
+        <div class="ph"><div><div class="crumb">Masters</div><h2>Vehicles <span class="muted" style="font-weight:500;font-size:16px">42</span></h2></div><div class="row"><span class="btn ghost"><span class="ms">upload_file</span>Import from Excel</span><span class="btn"><span class="ms">add</span>Add vehicle</span></div></div>
+        <div class="row">
+          <div class="input" style="width:300px"><span class="ms">search</span><span class="muted">Search registration no.</span></div>
+          <span class="chip ok solid">All</span><span class="chip">Available 17</span><span class="chip">On trip 14</span><span class="chip">Maintenance 3</span><span class="chip alert"><span class="ms">warning</span>Docs expiring 5</span>
+          <span class="input" style="margin-left:auto;width:200px">All owners<span class="ms" style="margin-left:auto">expand_more</span></span>
+        </div>
+        <div class="card" style="padding:0;overflow:hidden">
+          <table class="t">
+            <thead><tr><th>Registration no.</th><th>Type</th><th>Owner</th><th>Status</th><th>RC</th><th>Insurance</th><th>Permit</th><th>Fitness</th><th>PUC</th><th>GPS</th><th></th></tr></thead>
+            <tbody>
+              <tr><td><b>MH13-AB-1234</b></td><td>10-wheeler · 9 t</td><td>Shree Sai Roadlines</td><td><span class="chip next">On trip</span></td><td><span class="chip ok">2031</span></td><td><span class="chip alert solid">9 days</span></td><td><span class="chip ok">Mar 2027</span></td><td><span class="chip ok">Jan 2027</span></td><td><span class="chip ok">Dec 2026</span></td><td><span class="small">Phone</span></td><td><span class="ms muted">more_vert</span></td></tr>
+              <tr><td><b>MH13-JK-7781</b></td><td>12-wheeler · 16 t</td><td>Shree Sai Roadlines</td><td><span class="chip next">On trip</span></td><td><span class="chip ok">2030</span></td><td><span class="chip ok">Jun 2027</span></td><td><span class="chip ok">Jun 2027</span></td><td><span class="chip ok">Apr 2027</span></td><td><span class="chip ok">Jan 2027</span></td><td><span class="small">AIS-140</span></td><td><span class="ms muted">more_vert</span></td></tr>
+              <tr><td><b>MH12-EF-9012</b></td><td>407 · 2.5 t</td><td>Deshmukh Carriers</td><td><span class="chip next">On trip</span></td><td><span class="chip ok">2029</span></td><td><span class="chip ok">Feb 2027</span></td><td><span class="chip alert">12 days</span></td><td><span class="chip ok">Nov 2026</span></td><td><span class="chip ok">Mar 2027</span></td><td><span class="small">Phone</span></td><td><span class="ms muted">more_vert</span></td></tr>
+              <tr><td><b>MH13-CQ-4410</b></td><td>10-wheeler · 9 t</td><td>Patil Transport</td><td><span class="chip ok">Available</span></td><td><span class="chip ok">2032</span></td><td><span class="chip ok">Aug 2027</span></td><td><span class="chip ok">Aug 2027</span></td><td><span class="chip ok">Jul 2027</span></td><td><span class="chip alert solid">Expired</span></td><td><span class="small">Phone</span></td><td><span class="ms muted">more_vert</span></td></tr>
+              <tr><td><b>MH45-KL-2211</b></td><td>Reefer · 7 t</td><td>Shree Sai Roadlines</td><td><span class="chip next">On trip</span></td><td><span class="chip ok">2031</span></td><td><span class="chip ok">May 2027</span></td><td><span class="chip ok">May 2027</span></td><td><span class="chip ok">Feb 2027</span></td><td><span class="chip ok">Feb 2027</span></td><td><span class="small">AIS-140</span></td><td><span class="ms muted">more_vert</span></td></tr>
+              <tr><td><b>MH13-AX-1188</b></td><td>Tata Ace · 1 t</td><td>Bhosale Freight Lines</td><td><span class="chip up">Pending KYC</span></td><td><span class="chip ok">2028</span></td><td><span class="chip alert">14 days</span></td><td><span class="chip ok">Jan 2027</span></td><td><span class="chip ok">Dec 2026</span></td><td><span class="chip ok">Nov 2026</span></td><td><span class="small muted">—</span></td><td><span class="ms muted">more_vert</span></td></tr>
+              <tr><td><b>MH14-CD-1902</b></td><td>10-wheeler · 9 t</td><td>Jadhav Logistics</td><td><span class="chip skip">Maintenance</span></td><td><span class="chip ok">2030</span></td><td><span class="chip ok">Sep 2027</span></td><td><span class="chip ok">Sep 2027</span></td><td><span class="chip ok">Jun 2027</span></td><td><span class="chip ok">Apr 2027</span></td><td><span class="small">Phone</span></td><td><span class="ms muted">more_vert</span></td></tr>
+            </tbody>
+          </table>
+          <div class="row between small muted" style="padding:12px 16px;border-top:1px solid var(--s200)"><span>Red = expired or under 15 days. Expired trucks can't be assigned to a trip.</span><span>Showing 1–7 of 42</span></div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</div>
+<script src="assets/ft.js"></script></body></html>
